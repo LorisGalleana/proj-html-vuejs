@@ -16,9 +16,9 @@ export default {
 </script>
 
 <template>
-    <section>
-        <div class="title">
-            <h2>About Page</h2>
+    <section >
+        <div class="container-fluid text-center ">
+            <h2 class="title py-4 ">About Page</h2>
         </div>
         <AppAgency />
         <AppVision />
@@ -32,5 +32,8 @@ export default {
 
 .title {
     background-color: $bg-gray;
+    color: $green-text;
+    font-size: 2rem;
+    margin-bottom: 130px;
 }
 </style>

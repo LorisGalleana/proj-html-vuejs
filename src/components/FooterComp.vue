@@ -6,7 +6,7 @@ export default {
 </script>
 
 <template>
-    <h2>This is a Footer</h2>
+    <!-- <h2>This is a Footer</h2> -->
 </template>
 
 <style lang="scss" scoped>
