@@ -17,6 +17,9 @@ export default {
 
 <template>
     <section>
+        <div class="title">
+            <h2>About Page</h2>
+        </div>
         <AppAgency />
         <AppVision />
         <AppTeam />
@@ -25,5 +28,9 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use "../styles/partials/variables" as *;
 
+.title {
+    background-color: $bg-gray;
+}
 </style>
