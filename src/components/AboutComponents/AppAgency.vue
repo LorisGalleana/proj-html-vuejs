@@ -26,7 +26,6 @@ export default {
 @use "../../styles/partials/variables" as *;
     .bg-color {
         background: linear-gradient(to right, $bg-gray 70%, white 30%);
-        
     }
     .text-color {
         color: $green-text;
