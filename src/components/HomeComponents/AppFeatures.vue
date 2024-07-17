@@ -11,9 +11,19 @@ export default {
     <div class="container-fluid d-flex bg-color">
         <div class="container">
             <div class="row py-5">
-                <div class="col-4">
+                <div class="col-4 py-5">
                     <h2 class="fs-1 lh-base">We Are Here To
-                        Make Your <span class="text-color">Website </span>Look More <span class="text-color">Elegant </span>And Stylish! </h2>
+                        Make Your <span class="text-color">Website </span>Look More <span class="text-color">Elegant </span>And Stylish! 
+                    </h2>
+                    <!-- linea divisore -->
+                    <div class="full-line mt-4 mb-5 d-flex gap-2">
+                            <div class="short">
+
+                            </div>
+                            <div class="long">
+
+                            </div>
+                        </div>
                     <a href="#" class="btn btn-color ">VIEW ALL</a>
                 </div>
                 <div class="col-8">
@@ -60,7 +70,7 @@ export default {
         background: $green-gradient ;
         color: white;
         border-radius: 24px;
-        font-size: 0.7rem;
+        font-size: 0.8rem;
         padding: 12px 30px;
     }
     .mini-font {
