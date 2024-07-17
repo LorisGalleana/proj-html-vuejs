@@ -7,10 +7,22 @@ export default {
 <template>
     <div class="container-fluid color-bg">
         <div class="container">
-            <div class="row">
+            <div class="row text-center">
                 <div class="col-12 text-white text-center py-5 fs-1">
                     Our Visions
                 </div>
+                <div class="col-12 d-flex justify-content-center">
+                     <!-- linea divisore -->
+                    <div class="full-line mb-4 d-flex gap-2">
+                        <div class="short" id="white">
+
+                        </div>
+                        <div class="long">
+
+                        </div>
+                    </div>
+                </div>
+               
             </div>
             <div class="row text-white text-center">
                 <div class="col-3">
@@ -55,5 +67,9 @@ export default {
     border-radius: 50%;
     padding: 1.2rem;
     margin-bottom: 20px ;
+}
+
+#white{
+    background-color: white;
 }
 </style>
