@@ -29,11 +29,4 @@ export default {
 
 <style lang="scss" scoped>
 @use "../styles/partials/variables" as *;
-
-.title {
-    background-color: $bg-gray;
-    color: $green-text;
-    font-size: 2rem;
-    margin-bottom: 130px;
-}
 </style>
