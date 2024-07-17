@@ -1,6 +1,11 @@
 <script>
+import AppFeatures from '../components/HomeComponents/AppFeatures.vue';
 export default {
-    name: "AppHome"
+    name: "AppHome",
+    components: {
+        AppFeatures,
+    
+    }
 }
 </script>
 
@@ -8,6 +13,9 @@ export default {
     <section>
         <h2>Homepage</h2>
     </section>
+   <AppFeatures />
 </template>
 
-<style scoped></style>
+<style scoped>
+
+</style>
