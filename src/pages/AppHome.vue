@@ -2,7 +2,7 @@
 import AppJumbo from '../components/HomeComponents/AppJumbo.vue'
 import AppFeatures from '../components/HomeComponents/AppFeatures.vue'
 /* import AppMore from '../components/HomeComponents/AppMore.vue' */
-/* import AppProjects from '../components/HomeComponents/AppProjects.vue' */
+import AppProjects from '../components/HomeComponents/AppProjects.vue'
 /* import AppFeedback from '../components/HomeComponents/AppFeedback.vue' */
 /* import AppPricing from '../components/HomeComponents/AppPricing.vue' */
 import AppCustomer from '../components/HomeComponents/AppCustomer.vue'
@@ -14,7 +14,7 @@ export default {
         AppJumbo,
         AppFeatures,
         /* AppMore, */
-        /* AppProjects, */
+        AppProjects,
         /* AppFeedback, */
         /* AppPricing, */
         AppCustomer,
@@ -27,7 +27,7 @@ export default {
    <AppJumbo />
     <AppFeatures />
         <!-- <AppMore /> -->
-        <!-- <AppProjects /> -->
+    <AppProjects />
     <!-- <AppFeedback /> -->
         <!-- <AppPricing /> -->
     <AppCustomer />
