@@ -1,13 +1,16 @@
 <script>
+// import AppMap from '../components/ContactsComponents/AppMap.vue';
+
 export default {
-    name: "AppContact"
+    name: "AppContact",
+    // components: {
+    //     AppMap,
+    // },  
 }
 </script>
 
 <template>
-    <section>
-        <h2>Contacts</h2>
-    </section>
+    <!-- <AppMap /> -->
 </template>
 
 <style scoped></style>

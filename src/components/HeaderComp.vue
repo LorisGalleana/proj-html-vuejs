@@ -19,6 +19,11 @@ export default {
                     About Us
                 </router-link>
             </li>
+            <li>
+                <router-link :to="{ name: 'contact' }" class="nav-link">
+                    Contacts
+                </router-link>
+            </li>
         </ul>
     </nav>
 </template>
