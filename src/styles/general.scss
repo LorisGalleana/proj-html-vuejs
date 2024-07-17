@@ -1,7 +1,35 @@
+@use './partials/variables' as *;
+
 @import 'node_modules/bootstrap/scss/bootstrap';
 
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+// interline div
+
+.full-line {
+    width: 90px;
+    height: 9px;
+    border: 1px solid white;
+    .short {
+        width: 15px;
+        background: $green-gradient;
+        height: 100%;
+        border-radius: 10px;
+    }
+    .long {
+        width: 65px;
+        background: $green-gradient;
+        height: 100%;
+        border-radius: 10px;
+    }
+}
+
+// colors
+
+.color-black {
+    color: black;
 }

@@ -1,13 +1,21 @@
 <script>
+import AppFeatures from '../components/HomeComponents/AppFeatures.vue';
+import AppJumbo from '../components/HomeComponents/AppJumbo.vue';
 export default {
-    name: "AppHome"
+    name: "AppHome",
+    components: {
+        AppJumbo,
+        AppFeatures,
+    }
 }
 </script>
 
 <template>
-    <section>
-        <h2>Homepage</h2>
-    </section>
+   <AppJumbo />
+   <AppFeatures />
+
 </template>
 
-<style scoped></style>
+<style scoped>
+
+</style>
