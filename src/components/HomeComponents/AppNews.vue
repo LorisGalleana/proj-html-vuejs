@@ -131,4 +131,12 @@ img{
     margin-top: 70px;
 }
 
+
+.btn{
+        &:hover{
+            background: $green-gradient ;
+            color: white;
+        }
+    }
+
 </style>
