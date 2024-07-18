@@ -69,7 +69,6 @@ export default {
 // cards
 
 .col-3 {
-    border: 1px solid white;
     padding: 60px 40px;
     border-radius: 10%;
     &:hover {
