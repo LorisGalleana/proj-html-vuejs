@@ -111,6 +111,7 @@ img{
     background-color: white;
     width: 70%;
     padding: 20px;
+    box-shadow: 20px 0 40px 0 rgba(0, 0, 0, .06);
 }
 
 .card-absolute-date{
