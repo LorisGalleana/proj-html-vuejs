@@ -8,7 +8,7 @@ export default {
 </script>
 
 <template>
-    <div class="container-fluid d-flex bg-color">
+    <div class="container-fluid my-5 d-flex bg-color">
         <div class="container position-relative">
             <div class="vertical-text position-absolute">
                 17 years of experience helping people for best solutions

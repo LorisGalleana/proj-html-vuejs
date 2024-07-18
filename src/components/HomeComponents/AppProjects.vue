@@ -51,7 +51,7 @@ export default {
 </script>
 
 <template>
-    <div class="container-fluid">
+    <div class="container-fluid my-5">
         <div class="container position-relative">
             <div class="vertical-text position-absolute">17 years of experience helping people for best solutions</div>
             <div class="row align-items-end">

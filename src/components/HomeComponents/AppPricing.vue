@@ -7,7 +7,7 @@ export default {
 </script>
 
 <template>
-    <div class="container">
+    <div class="container my-5">
         <div class="row align-items-center">
             <div class="col-3">
                 <!-- Interlinea -->

@@ -6,8 +6,8 @@ export default {
 
 <template>
     <div class="container-fluid d-flex bg-color py-5">
-        <div class="container">
-            <div class="row py-5">
+        <div class="container h-100">
+            <div class="row pt-100">
                 <div class="col-8 Mycontainer">
                     <div class="containerGreen">
                         <img class="imgback" src="/public/img/busy-architect-PYVKWM4-1024x872.jpg" alt="">
@@ -76,5 +76,9 @@ export default {
   .containerGreen{
    background-color: red;
     width: 100%;
+  }
+
+  .pt-100 {
+    padding-top: 130px;
   }
 </style>
