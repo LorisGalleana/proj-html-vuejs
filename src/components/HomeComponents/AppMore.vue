@@ -1,7 +1,4 @@
 <script>
-
-
-
 export default {
     name: "AppMore"
 }
@@ -55,7 +52,6 @@ export default {
             color: white;
         }
     }
-
     .Mycontainer{
         position: relative;
         img{
@@ -67,15 +63,12 @@ export default {
         margin-left: 60px;
         top:0;
     }
-
     .imgback{
         bottom: 0;
         left: 0;
         width:65% ;
         opacity: 0.3;
-
     }
-
     .container-fluid{
         height: 800px;
     }
