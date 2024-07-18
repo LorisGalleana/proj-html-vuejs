@@ -6,7 +6,7 @@ import AppProjects from '../components/HomeComponents/AppProjects.vue'
 import AppFeedback from '../components/HomeComponents/AppFeedback.vue'
 import AppPricing from '../components/HomeComponents/AppPricing.vue'
 import AppCustomer from '../components/HomeComponents/AppCustomer.vue'
-/* import AppNews from '../components/HomeComponents/AppNews.vue' */
+import AppNews from '../components/HomeComponents/AppNews.vue' 
 
 export default {
     name: "AppHome",
@@ -18,7 +18,7 @@ export default {
         AppFeedback,
         AppPricing,
         AppCustomer,
-        /* AppNews */
+        AppNews,
     }
 }
 </script>
@@ -31,7 +31,7 @@ export default {
     <AppFeedback />
     <AppPricing />
     <AppCustomer />
-    <!-- <AppNews /> -->
+    <AppNews /> 
 </template>
 
 <style scoped>

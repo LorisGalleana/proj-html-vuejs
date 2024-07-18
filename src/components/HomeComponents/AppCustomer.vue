@@ -18,7 +18,6 @@ export default {
             </div>
         </div>
     </div>
-    <div class="white-space"></div>
 </template>
 
 <style lang="scss" scoped>
@@ -52,9 +51,7 @@ export default {
     font-size: 1.7rem;
 }
 
-.white-space {
-    height: 1000px;
-}
+
 img {
     height: 100px;
     width: 100px;
