@@ -28,7 +28,13 @@ export default {
                     "name": "contact",
                     "available": true
                 }
-            ]
+            ],
+            currentIndex: 0,
+        }
+    },
+    methods: {
+            toggleNav(index) {
+            this.currentIndex = index;
         }
     }
 }
@@ -60,8 +66,8 @@ export default {
             </div>
             <nav>
                 <ul class="d-flex router-list">
-                    <li v-for="(route,index) in routePage" :key="index">
-                        <router-link :to="{ name: route.available ? route.name : 'NotFound' }" class="nav-link">
+                    <li v-for="(route,index) in routePage" :key="index" @click="toggleNav(index)">
+                        <router-link :to="{ name: route.available ? route.name : 'NotFound' }" class="nav-link" :class="currentIndex === index ? 'active' : '' ">
                             {{route.name.toUpperCase()}}
                         </router-link>
                     </li>
@@ -92,6 +98,10 @@ export default {
         li {
             a {
                 font-size: 0.875rem;
+                
+                &:hover {
+                    color: #aaa;
+                }
             }
         }
     }
@@ -136,5 +146,8 @@ export default {
         display: flex;
         gap: 10px;
         margin-left: 10px;
+    }
+    .active {
+        font-weight: 600;
     }
 </style>
