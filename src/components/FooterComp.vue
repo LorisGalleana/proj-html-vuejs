@@ -227,8 +227,8 @@ input[type=submit] {
     border: none;
     cursor: pointer;
     position: absolute;
-    right: 140px;
-    top: 190px;
+    right: 24%;
+    top: 58%;
 }
 .btn-color {
         background: $black-gradient ;
