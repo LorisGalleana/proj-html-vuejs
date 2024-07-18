@@ -86,27 +86,27 @@ input,textarea{
     outline: none;
 }
 
-.container .text{
+.text{
   font-size: 2em;
   font-weight: 600;
 }
 
 /* Form row */
 
-.container form .form-row{
+.form-row{
   display: flex;
   margin: 32px 0;
 }
 
-form .form-row .input-data{
+.input-data{
   width: 100%;
   height: 40px;
   margin: 0 10px;
   position: relative;
 }
 
-form .form-row .textarea{
-  height: 70px;
+.textarea{
+  height: 50px;
 }
 
 .input-data input,
@@ -126,10 +126,7 @@ form .form-row .textarea{
   color: #3498db;
 }
 
-.textarea textarea{
-  resize: none;
-  padding-top: 10px;
-}
+
 
 .input-data label{
   position: absolute;
@@ -142,32 +139,6 @@ form .form-row .textarea{
 .textarea label{
   width: 100%;
   bottom: 40px;
-  background: #fff;
-}
-
-.input-data .underline{
-  position: absolute;
-  bottom: 0;
-  height: 2px;
-  width: 100%;
-}
-
-.input-data .underline:before{
-  position: absolute;
-  content: "";
-  height: 2px;
-  width: 100%;
-  background: #3498db;
-  transform: scaleX(0);
-  transform-origin: center;
-  transition: transform 0.3s ease;
-}
-
-.input-data input:focus ~ .underline:before,
-.input-data input:valid ~ .underline:before,
-.textarea textarea:focus ~ .underline:before,
-.textarea textarea:valid ~ .underline:before{
-  transform: scale(1);
 }
 
 /* Button */
