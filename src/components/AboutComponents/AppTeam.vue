@@ -6,14 +6,20 @@ export default {
 
 <template>
     <!-- Titolo sezione -->
+
     <section class="team-title text-center">
         <h2 class="fs-1 lh-base">Get to know <br>
             <span class="text-color">our team</span> 
         </h2>
     </section>
+
     <!-- Card container -->
+    
      <div class="container">
         <div class="row">
+
+            <!-- card 1 -->
+
             <div class="card">
                 <img src="/public/img/worker/1.png" alt="worker">
                 <div class="card-info">
@@ -34,6 +40,9 @@ export default {
                     </div>
                 </div>
             </div>
+
+            <!-- card 2 -->
+
             <div class="card">
                 <img src="/public/img/worker/2.png" alt="worker">
                 <div class="card-info">
@@ -54,6 +63,9 @@ export default {
                     </div>
                 </div>
             </div>
+
+            <!-- card 3 -->
+
             <div class="card">
                 <img src="/public/img/worker/3.png" alt="worker">
                 <div class="card-info">
@@ -74,6 +86,9 @@ export default {
                     </div>
                 </div>
             </div>
+
+            <!-- card 4 -->
+
             <div class="card">
                 <img src="/public/img/worker/4.png" alt="worker">
                 <div class="card-info">
@@ -94,6 +109,9 @@ export default {
                     </div>
                 </div>
             </div>
+
+            <!-- card 5  -->
+
             <div class="card">
                 <img src="/public/img/worker/5.png" alt="worker">
                 <div class="card-info">
@@ -114,6 +132,9 @@ export default {
                     </div>
                 </div>
             </div>
+
+            <!-- card 6 -->
+
             <div class="card">
                 <img src="/public/img/worker/6.png" alt="worker">
                 <div class="card-info">
