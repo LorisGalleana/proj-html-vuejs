@@ -77,7 +77,6 @@ export default {
     }
   
   .containerGreen{
-   background-color: red;
     width: 100%;
   }
   .containerGreen::after {
