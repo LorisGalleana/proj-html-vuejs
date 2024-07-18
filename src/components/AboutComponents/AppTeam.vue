@@ -170,7 +170,7 @@ export default {
     margin: 60px 0;
 }
 .card{
-    width: calc(100% / 3 - 40px);
+    width: calc(100% / 3 - 20px);
     padding: 0;
     margin-bottom: 20px;
     margin-right: 20px;
