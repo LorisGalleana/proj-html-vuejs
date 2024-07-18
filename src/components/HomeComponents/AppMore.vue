@@ -62,12 +62,15 @@ export default {
         width:65% ;
         margin-left: 60px;
         top:0;
+        border-radius: 10px;
+
     }
     .imgback{
         bottom: 0;
         left: 0;
         width:65% ;
-        opacity: 0.3;
+        border-radius: 10px;
+
     }
     .container-fluid{
         height: 800px;
@@ -77,6 +80,19 @@ export default {
    background-color: red;
     width: 100%;
   }
+  .containerGreen::after {
+    content: "";
+    top: -85px;
+    left: 0;
+    position: absolute;
+    background: $green-gradient;
+    width: 65%;
+    height: 121%;
+    opacity: .8;
+    border-radius: 10px;
+
+    
+}
 
   .pt-100 {
     padding-top: 130px;
