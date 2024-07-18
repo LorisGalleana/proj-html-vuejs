@@ -202,6 +202,7 @@ export default {
     justify-content: center;
     align-items: center;
     position: relative;
+    box-shadow: 0 3px 45px 0 rgba(0, 0, 0, .14);
 }
 input[type=email] {
     border-bottom: none;
@@ -222,6 +223,7 @@ input[type=email] {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    box-shadow: -10px 11px 40px 0 rgba(20, 212, 153, .25);
 }
 .small-text {
     color: rgba(255, 255, 255, .7);
