@@ -42,7 +42,7 @@ export default {
                 <div class="small-text">
                     Are You Ready?
                 </div>
-                <div class="title">
+                <div class="title-absolute">
                     Start a New Project
                 </div>
                 <div class="email">
@@ -54,7 +54,7 @@ export default {
                 <div class="small-text">
                     What Are You Waiting for?
                 </div>
-                <div class="title">
+                <div class="title-absolute">
                     Let's Talk About Work
                 </div>
                 <div class="start">
@@ -129,7 +129,7 @@ input[type=email] {
     color: rgba(255, 255, 255, .7);
 
 }
-.title {
+.title-absolute {
     color: white;
     font-size: 2.5rem;
     margin-bottom: 20px;
