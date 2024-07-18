@@ -95,7 +95,7 @@ export default {
     <div class="white-block container-fluid">
         <div class="container d-flex">
             <div class="description">
-                <img src="/public/img/cropped-Group-39-2x.png" alt="">
+                <a href="#"><img src="/public/img/cropped-Group-39-2x.png" alt=""></a>
                 <div class="description-text">While the lovely valley teems with vapour around me, and the meridian sun strikes the upper surface of the impenetrable foliage of my trees.While the lovely valley teems with vapour around me.</div>
             </div>
             <div class="quick-links">
