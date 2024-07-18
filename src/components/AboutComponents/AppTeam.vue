@@ -16,7 +16,7 @@ export default {
     <!-- Card container -->
     
      <div class="container">
-        <div class="row">
+        <div class="row d-flex justify-content-between">
 
             <!-- card 1 -->
 
@@ -170,10 +170,9 @@ export default {
     margin: 60px 0;
 }
 .card{
-    width: calc(100% / 3 - 20px);
+    width: calc(100% / 3 - 10px);
     padding: 0;
     margin-bottom: 20px;
-    margin-right: 20px;
     position: relative;
     overflow: hidden;
     
