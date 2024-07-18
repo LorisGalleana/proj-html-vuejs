@@ -6,7 +6,7 @@ export default {
 
 <template>
     <section>
-        <h2>NOT FOUND 404</h2>
+        <h2>PAGE NOT FOUND: ERROR 404</h2>
     </section>
 </template>
 
