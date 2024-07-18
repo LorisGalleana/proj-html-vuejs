@@ -77,6 +77,7 @@ export default {
     background-color: #f6f6f6;
     height: 400px;
     position: relative;
+    margin-top: 400px;
 }
 .white-block {
     background-color: #fff;
