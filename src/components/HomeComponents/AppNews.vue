@@ -51,7 +51,7 @@ export default {
                
             </div>
             <div class="row text-center">
-                <div class="col-4 position-relative" v-for="(card,i) in cards" :key="i">
+                <div class="col-4 position-relative my-card" v-for="(card,i) in cards" :key="i">
                     <div class="card-absolute position-absolute">
                         <div class="card-absolute-date">
                             {{ card.card_absolute_date }}
@@ -112,6 +112,7 @@ img{
     width: 70%;
     padding: 20px;
     box-shadow: 20px 0 40px 0 rgba(0, 0, 0, .06);
+    border-radius: 5px;
 }
 
 .card-absolute-date{
@@ -132,12 +133,25 @@ img{
     margin-top: 70px;
 }
 
+/* Animazioni */
+img:hover{
+    transition: all 0.5s ease-in-out;
+    transform: scale(1.1);
+
+}
+
+.my-card:hover .card-absolute{
+    transition: all 0.5s ease-in-out;
+    bottom: -25%;
+    color: white;
+    background: $green-gradient;
+    z-index: 9;
+}
 
 .btn{
-        &:hover{
-            background: $green-gradient ;
-            color: white;
-        }
+    &:hover{
+        background: $green-gradient ;
+        color: white;
     }
-
+}
 </style>

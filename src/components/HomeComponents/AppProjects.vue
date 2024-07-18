@@ -123,8 +123,8 @@ export default {
     max-width: 100%;
     position: relative;
     &:hover .info{
+        transition: all 0.5s ease-in-out;
         display: flex;
-        animation: card-animation 1s;
         width: 100%;
         height: 100%;
         flex-direction: column;
@@ -132,7 +132,15 @@ export default {
         padding-left: 10%;
         padding-bottom: 10px;
         cursor: pointer;
+        z-index: 9;
+        opacity: 0.8;
     }
+}
+
+.my-card:hover{
+    transition: all 0.5s ease-in-out;
+    transform: scale(1.2);
+    z-index: 8;
 }
 
 .card-img{
@@ -143,7 +151,7 @@ export default {
         position: absolute;
         color: white;
         background: $green-gradient;
-        display: none;
+        opacity: 0;
 }
 
 h5,h6{
@@ -165,21 +173,6 @@ h5,h6{
     right: -20%;
     top: 50%;
     rotate: 270deg;
-}
-
-@keyframes card-animation {
-0% {
-    width: 0;
-    height: 0;
-    opacity: 0;
-    top: 50%;
-    left: 50%;
-}
-100% {
-    top: 0;
-    left: 0;
-}
-    
 }
 
 @keyframes text-animation {
