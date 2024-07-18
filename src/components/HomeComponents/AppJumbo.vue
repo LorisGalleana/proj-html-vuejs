@@ -18,7 +18,6 @@
       setup() {
         return {
           modules: [Navigation],
-          
         };
       },
       data() {
@@ -71,10 +70,10 @@
 
 
 <template>
-    <swiper :navigation="true" :loop="true" :modules="modules" class="mySwiper">
+    <swiper :navigation="true" :modules="modules" class="mySwiper">
         <swiper-slide v-for="(slide, i) in slides" :key="i">
             <div class="container-fluid">
-                <div class="row align-items-center container">
+                <div class="row align-items-center">
                     <div class="col-4">
                         <h4 class="aqua-text fs-6 mb-4"> 17 YEARS OF EXPERIENCE </h4>
                         <h1 class="enormous mb-4"> {{ slide.title }} <span class="aqua-text"> {{ slide.aquaTitle }} </span> </h1> 
@@ -125,7 +124,7 @@
 // styles
 
 .container-fluid {
-    height: 110vh;
+    height: 120vh;
     background-color: $bg-gray;
 }
 
@@ -141,6 +140,7 @@
 
 .enormous {
     font-size: 4rem;
+    font-weight: bolder;
 }
 
 .aqua-text {

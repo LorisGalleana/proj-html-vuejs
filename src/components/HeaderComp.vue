@@ -42,7 +42,8 @@ export default {
 </script>
 
 <template>
-    <div class="container-fluid black">
+    <div class="position-fixed sticky-top w-100 z-3">
+        <div class="container-fluid black">
         <div class="container upper-container">
             <div class="contact">
                 <i class="fa-solid fa-phone"></i>
@@ -80,6 +81,8 @@ export default {
             </div>
         </div>
     </div>
+    </div>
+    
     
 </template>
 
@@ -107,6 +110,8 @@ export default {
     }
     .white {
         height: 100px;
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 15px;
     }
     .bottom-container{
         height: 100%;
