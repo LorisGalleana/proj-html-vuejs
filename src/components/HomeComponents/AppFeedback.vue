@@ -5,8 +5,8 @@ export default {
 </script>
 
 <template>
-    <div class="container-fluid">
-        <div class="container d-flex ">
+    <div class="container-fluid my-5">
+        <div class="container d-flex mt-5">
             <div class="green-block">
                 <div class="numbers">
                     <div class="project">

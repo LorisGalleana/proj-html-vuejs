@@ -36,7 +36,9 @@ export default {
                     <h2 class="fs-1 lh-base">Latest News & Our <span class="text-color">Blog </span></h2>
                 </div>
                 <div class="col-12 d-flex justify-content-center">
+
                      <!-- linea divisore -->
+                      
                     <div class="full-line mb-4 d-flex gap-2">
                         <div class="short" id="white">
 

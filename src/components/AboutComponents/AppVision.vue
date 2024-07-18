@@ -13,7 +13,7 @@ export default {
                 </div>
                 <div class="col-12 d-flex justify-content-center">
                      <!-- linea divisore -->
-                    <div class="full-line mb-4 d-flex gap-2">
+                    <div class="full-line-w mb-4 d-flex gap-2">
                         <div class="short" id="white">
 
                         </div>
@@ -24,9 +24,9 @@ export default {
                 </div>
                
             </div>
-            <div class="row text-white text-center">
+            <div class="row my-5 gap-5 flex-nowrap text-white text-center">
                 <div class="col-3">
-                    <div class=""><i class="icon  fa-solid fa-database" style="color: #ffffff;"></i></div>
+                    <div class=""><i class="icon fa-solid fa-database" style="color: #ffffff;"></i></div>
                     <p class="fs-6 fw-semibold">Virtual Document </p>
                     <p class="py-2 mini-font">Far far away, behind the word mountains, far from the countries Vokalia...</p>
                 </div>
@@ -55,11 +55,29 @@ export default {
 
 .color-bg {
     background: $green-gradient;
-    height: 500px;
+    padding: 100px 0px;
 }
+
 .mini-font {
     font-size: 0.7rem;
 }
+
+#white{
+    background-color: white;
+}
+
+// cards
+
+.col-3 {
+    padding: 60px 40px;
+    border-radius: 10%;
+    &:hover {
+        background: $black-gradient;
+        opacity: 0.6;
+        cursor: pointer;
+    }
+}
+
 .icon {
     font-size: 3rem;
     display: inline-block;
@@ -69,7 +87,22 @@ export default {
     margin-bottom: 20px ;
 }
 
-#white{
-    background-color: white;
+// divisore
+
+.full-line-w {
+    width: 90px;
+    height: 8px;
+    .short {
+        width: 15px;
+        background: white;
+        height: 100%;
+        border-radius: 10px;
+    }
+    .long {
+        width: 65px;
+        background:white;
+        height: 100%;
+        border-radius: 10px;
+    }
 }
 </style>
