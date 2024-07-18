@@ -3,7 +3,33 @@
 
 
 export default {
-    name: "AppFeatures"
+    name: "AppFeatures",
+    data(){
+        return{
+            cards:[
+                {
+                    card_icon:'icon fa-solid fa-gauge-high',
+                    card_title:'Speed Optimization',
+                    card_description:'Far far away, behind the word mountains, far from the countries Vokalia Separated...',
+                },
+                {
+                    card_icon:'icon fa-solid fa-cloud',
+                    card_title:'Cloud Solutions',
+                    card_description:'Far far away, behind the word mountains, far from the countries Vokalia Separated...',
+                },
+                {
+                    card_icon:'icon fa-solid fa-tablet-screen-button',
+                    card_title:'Website Design',
+                    card_description:'Far far away, behind the word mountains, far from the countries Vokalia Separated...',
+                },
+                {
+                    card_icon:'icon fa-solid fa-stopwatch',
+                    card_title:'Online Marketing',
+                    card_description:'Far far away, behind the word mountains, far from the countries Vokalia Separated...',
+                },
+            ]
+        }
+    }
 }
 </script>
 
@@ -32,26 +58,13 @@ export default {
                     <a href="#" class="btn btn-color mt-4">VIEW ALL</a>
                 </div>
                 <div class="col-8">
-                    <div class="row">
-                        <div class="col-6 card">
-                            <div><i class="icon fa-solid fa-gauge-high"></i></div>
-                            <h3>Speed Optimization</h3>
-                            <p class="py-2 mini-font">Far far away, behind the word mountains, far from the countries Vokalia Separated...</p>
-                        </div>
-                        <div class="col-6 card">
-                            <div><i class="icon fa-solid fa-cloud"></i></div>
-                            <h3>Cloud Solutions</h3>
-                            <p class="py-2 mini-font">Far far away, behind the word mountains, far from the countries Vokalia Separated...</p>
-                        </div>
-                        <div class="col-6 card">
-                            <div><i class="icon fa-solid fa-tablet-screen-button"></i></div>
-                            <h3>Website Design</h3>
-                            <p class="py-2 mini-font">Far far away, behind the word mountains, far from the countries Vokalia Separated...</p>
-                        </div>
-                            <div class="col-6 card">
-                            <div><i class="icon fa-solid fa-stopwatch"></i></div>
-                            <h3>Online Marketing</h3>
-                            <p class="py-2 mini-font">Far far away, behind the word mountains, far from the countries Vokalia Separated...</p>
+                    <div class="my-row">
+                        <div class="card" v-for="(card,i) in cards" :key="i">
+                            <div class="background-col">
+                                <div><i :class="card.card_icon"></i></div>
+                                <h3>{{ card.card_title }}</h3>
+                                <p class="py-2 mini-font">{{ card.card_description }}</p>
+                            </div>
                         </div>
                     </div>  
                 </div>
@@ -82,6 +95,14 @@ export default {
     font-size: 0.8rem;
 }
 
+/* Cards */
+.my-row{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
 .icon {
     font-size: 3rem;
     display: inline-block;
@@ -91,29 +112,41 @@ export default {
     color: $green-text;
 }
 .card {
-    border: 1px solid white;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     width: calc(100% / 2 - 30px);
-    margin-right: 30px;
-    margin-bottom: 30px;
-    border-radius: 30px;
-    padding: 50px;
-    &:hover{
-        cursor: pointer;
-        background: $green-gradient ;
-        color: white;
-        .icon{
-            color: white;
-        }
-    }
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
 }
-
 // vertical text
 
 .vertical-text{
     right: -20%;
     top: 50%;
     rotate: 270deg;
+}
+
+/* Effetto hover su card */
+.card:hover{
+    cursor: pointer;
+    transition: all 0.3s linear;
+    color: white;
+}
+
+.card:hover .icon{
+    transition: all 0.3s linear;
+    color: white;
+}
+
+.card:hover .background-col{
+    background: $green-gradient;
+    transition: all 0.3s;
+}
+
+.background-col{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    padding: 20px;
 }
 
 </style>
