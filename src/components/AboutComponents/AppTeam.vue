@@ -1,6 +1,47 @@
 <script>
 export default {
-    name: "AppTeam"
+    name: "AppTeam",
+    data(){
+        return{
+            workers:[
+                {
+                    card_image:'/public/img/worker/1.png',
+                    card_name:'ANNA PHILANDORS',
+                    card_role:'Creative director',
+                    card_paragraph:'Far far away, behind the word mountains, far from the countries Vokalia and Conson, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics...',
+                }, {
+                    card_image:'/public/img/worker/2.png',
+                    card_name:'DEXTER MATTHEW',
+                    card_role:'Designer',
+                    card_paragraph:'Far far away, behind the word mountains, far from the countries Vokalia and Conson, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics...',
+                },
+                {
+                    card_image:'/public/img/worker/3.png',
+                    card_name:'RANDY SMITH',
+                    card_role:'Project Manage',
+                    card_paragraph:'Far far away, behind the word mountains, far from the countries Vokalia and Conson, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics...',
+                },
+                {
+                    card_image:'/public/img/worker/4.png',
+                    card_name:'ANGELO GARNER',
+                    card_role:'Co-founder',
+                    card_paragraph:'Far far away, behind the word mountains, far from the countries Vokalia and Conson, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics...',
+                },
+                {
+                    card_image:'/public/img/worker/5.png',
+                    card_name:'JIMMIE BENEDICT',
+                    card_role:'Frontend Developer',
+                    card_paragraph:'Far far away, behind the word mountains, far from the countries Vokalia and Conson, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics...',
+                },
+                {
+                    card_image:'/public/img/worker/6.png',
+                    card_name:'JANET GARNER',
+                    card_role:'Founder',
+                    card_paragraph:'Far far away, behind the word mountains, far from the countries Vokalia and Conson, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics...',
+                },
+            ]
+        }
+    }
 }
 </script>
 
@@ -18,15 +59,15 @@ export default {
      <div class="container">
         <div class="row d-flex justify-content-between">
 
-            <!-- card 1 -->
+            <!-- cards -->
 
-            <div class="card">
-                <img src="/public/img/worker/1.png" alt="worker">
+            <div class="card" v-for="(worker,i) in workers" :key="i">
+                <img :src="worker.card_image" alt="worker">
                 <div class="card-info">
-                    <div class="name fs-4">ANNA PHILANDORS</div>
-                    <div class="role fs-5">Creative director</div>
+                    <div class="name fs-4">{{worker.card_name}}</div>
+                    <div class="role fs-5">{{ worker.card_role }}</div>
                     <p class="mt-2">
-                        Far far away, behind the word mountains, far from the countries Vokalia and Conson, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics...
+                        {{ worker.card_paragraph }}
                     </p>
                     <div class="icons">
                         <a href="#">
@@ -41,120 +82,7 @@ export default {
                 </div>
             </div>
 
-            <!-- card 2 -->
-
-            <div class="card">
-                <img src="/public/img/worker/2.png" alt="worker">
-                <div class="card-info">
-                    <div class="name fs-4">DEXTER MATTHEW</div>
-                    <div class="role fs-5">Designer</div>
-                    <p class="mt-2">
-                        Far far away, behind the word mountains, far from the countries Vokalia and Conson, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics...
-                    </p>
-                    <div class="icons">
-                        <a href="#">
-                            <i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#">
-                            <i class="fa-brands fa-twitter"></i>
-                        </a>
-                        <a href="#">
-                            <i class="fa-brands fa-pinterest-p"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- card 3 -->
-
-            <div class="card">
-                <img src="/public/img/worker/3.png" alt="worker">
-                <div class="card-info">
-                    <div class="name fs-4">RANDY SMITH</div>
-                    <div class="role fs-5">Project Manager</div>
-                    <p class="mt-2">
-                        Far far away, behind the word mountains, far from the countries Vokalia and Conson, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics...
-                    </p>
-                    <div class="icons">
-                        <a href="#">
-                            <i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#">
-                            <i class="fa-brands fa-twitter"></i>
-                        </a>
-                        <a href="#">
-                            <i class="fa-brands fa-pinterest-p"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- card 4 -->
-
-            <div class="card">
-                <img src="/public/img/worker/4.png" alt="worker">
-                <div class="card-info">
-                    <div class="name fs-4">ANGELO GARNER</div>
-                    <div class="role fs-5">Co-founder</div>
-                    <p class="mt-2">
-                        Far far away, behind the word mountains, far from the countries Vokalia and Conson, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics...
-                    </p>
-                    <div class="icons">
-                        <a href="#">
-                            <i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#">
-                            <i class="fa-brands fa-twitter"></i>
-                        </a>
-                        <a href="#">
-                            <i class="fa-brands fa-pinterest-p"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- card 5  -->
-
-            <div class="card">
-                <img src="/public/img/worker/5.png" alt="worker">
-                <div class="card-info">
-                    <div class="name fs-4">JIMMIE BENEDICT</div>
-                    <div class="role fs-5">Frontend developer</div>
-                    <p class="mt-2">
-                        Far far away, behind the word mountains, far from the countries Vokalia and Conson, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics...
-                    </p>
-                    <div class="icons">
-                        <a href="#">
-                            <i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#">
-                            <i class="fa-brands fa-twitter"></i>
-                        </a>
-                        <a href="#">
-                            <i class="fa-brands fa-pinterest-p"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- card 6 -->
-
-            <div class="card">
-                <img src="/public/img/worker/6.png" alt="worker">
-                <div class="card-info">
-                    <div class="name fs-4">JANET GARNER</div>
-                    <div class="role fs-5">Founder</div>
-                    <p class="mt-2">
-                        Far far away, behind the word mountains, far from the countries Vokalia and Conson, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics...
-                    </p>
-                    <div class="icons">
-                        <a href="#">
-                            <i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#">
-                            <i class="fa-brands fa-twitter"></i>
-                        </a>
-                        <a href="#">
-                            <i class="fa-brands fa-pinterest-p"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
+            
         </div>
 
      </div>
