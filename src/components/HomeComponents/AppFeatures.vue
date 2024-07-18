@@ -99,6 +99,7 @@ export default {
     border-radius: 30px;
     padding: 50px;
     &:hover{
+        cursor: pointer;
         background: $green-gradient ;
         color: white;
         .icon{
