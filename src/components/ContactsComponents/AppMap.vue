@@ -30,18 +30,20 @@
 
 <template>
     <div class="container-fluid position-relative">
-        <div class="contact-cards d-flex gap-5 position-absolute">
-            <div class="card" v-for="(card, i) in cards" :key="i">
+        <div class="container contact-cards d-flex gap-5 position-absolute">
+            <!-- Cards -->
+            <div class="col card d-flex flex-row gap-4 align-items-center" v-for="(card, i) in cards" :key="i">
                 <div>
                     <i :class="card.icon"></i>
                 </div>
                 <div>
                     <h5 class="card-title"> {{ card.title }} </h5>
-                    <p class="upper card-text"> {{ card.line1 }} </p>
+                    <p class="card-text"> {{ card.line1 }} </p>
                     <p class="card-text"> {{ card.line2 }} </p>
                 </div>
             </div>
         </div>
+        <!-- Map -->
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16704.44388398264!2d0.11163938674607704!3d51.51082288353242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8af64ddbcd4e9%3A0x8bb0eba23941c7c8!2sLondra%2C%20Regno%20Unito!5e0!3m2!1sit!2sit!4v1721229334293!5m2!1sit!2sit" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    
     </div>
 </template>
@@ -51,34 +53,22 @@
 
 .container-fluid {
     iframe {
-        width: 100%;  
-        margin: 0;
+        width: 100%;
     }
 }
-
-p.upper {
-    line-height: 10px;
-}
-
+/* Card styles */
 .card {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: 30px;
-
     border: 1px solid white;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    padding: 70px 60px;
+    padding: 5%;
 
     i {
         color: $green-text;
         font-size: 4rem;
     }
 }
-
+/* Absolute card container */
 .contact-cards {
-    width: 70%;
     bottom: -50%;
     left: 50%;
     transform: translate(-50%, -50%);
