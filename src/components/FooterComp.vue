@@ -269,7 +269,12 @@ ul {
         a {
             text-decoration: none;
             color: black;
+
+            &:hover {
+                color: $green-text;
+            }
         }
+        
         
     }
 }
