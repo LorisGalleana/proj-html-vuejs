@@ -73,7 +73,6 @@ export default {
 <style lang="scss" scoped>
 @use '../../styles/partials/variables' as *;
 
-
 .green-text{
     color: $green-text;
 }
@@ -91,20 +90,25 @@ input,textarea{
   font-size: 2em;
   font-weight: 600;
 }
+
 /* Form row */
+
 .container form .form-row{
   display: flex;
   margin: 32px 0;
 }
+
 form .form-row .input-data{
   width: 100%;
   height: 40px;
   margin: 0 10px;
   position: relative;
 }
+
 form .form-row .textarea{
   height: 70px;
 }
+
 .input-data input,
 .textarea textarea{
   display: block;
@@ -114,16 +118,19 @@ form .form-row .textarea{
   font-size: 17px;
   border-bottom: 2px solid rgba(0,0,0, 0.12);
 }
+
 .input-data input:focus ~ label, .textarea textarea:focus ~ label,
 .input-data input:valid ~ label, .textarea textarea:valid ~ label{
   transform: translateY(-20px);
   font-size: 14px;
   color: #3498db;
 }
+
 .textarea textarea{
   resize: none;
   padding-top: 10px;
 }
+
 .input-data label{
   position: absolute;
   pointer-events: none;
@@ -131,17 +138,20 @@ form .form-row .textarea{
   font-size: 16px;
   transition: all 0.3s ease;
 }
+
 .textarea label{
   width: 100%;
   bottom: 40px;
   background: #fff;
 }
+
 .input-data .underline{
   position: absolute;
   bottom: 0;
   height: 2px;
   width: 100%;
 }
+
 .input-data .underline:before{
   position: absolute;
   content: "";
@@ -152,6 +162,7 @@ form .form-row .textarea{
   transform-origin: center;
   transition: transform 0.3s ease;
 }
+
 .input-data input:focus ~ .underline:before,
 .input-data input:valid ~ .underline:before,
 .textarea textarea:focus ~ .underline:before,
