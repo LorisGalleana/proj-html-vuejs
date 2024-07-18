@@ -20,7 +20,7 @@ export default {
 <style lang="scss" scoped>
 @use "../../styles/partials/variables" as *;
 .container-fluid {
-    height: 97vh;
+    height: 70vh;
     background-image: url(img/Businessman-with-smartphone-standing-at-staircase.@2x.jpg);
     background-size: cover;
     position: relative;
