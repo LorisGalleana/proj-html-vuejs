@@ -1,6 +1,27 @@
 <script>
 export default {
-    name: "AppNews"
+    name: "AppNews",
+    data(){
+        return{
+            cards:[
+                {
+                    card_image:'/public/img/serious-businesswoman-with-documents-talking-on-P9Q6LX6-1024.jpg',
+                    card_absolute_title:'Marketing Ideas',
+                    card_absolute_date:'May 24, 2018 •by Alex',
+                },
+                {
+                    card_image:'/public/img/Businessman-at-the-desk-in-his-office-resting--1024x768.jpg',
+                    card_absolute_title:'Rest During Working Hours',
+                    card_absolute_date:'May 24, 2018 •by Alex',
+                },
+                {
+                    card_image:'/public/img/simple-home-office-with-tree-PBXRXYB-large-1024x768.jpg',
+                    card_absolute_title:'Develop Your Startup Idea',
+                    card_absolute_date:'May 24, 2018 •by Alex',
+                },
+            ]
+        }
+    }
 }
 </script>
 
@@ -28,14 +49,21 @@ export default {
                
             </div>
             <div class="row text-center">
-                <div class="col-4">
-                    <img src="/public/img/serious-businesswoman-with-documents-talking-on-P9Q6LX6-1024.jpg" alt="">
+                <div class="col-4 position-relative" v-for="(card,i) in cards" :key="i">
+                    <div class="card-absolute position-absolute">
+                        <div class="card-absolute-date">
+                            {{ card.card_absolute_date }}
+                        </div>
+                        <div class="card-absolute-title">
+                            {{ card.card_absolute_title }}
+                        </div>
+                    </div>
+                    <img :src="card.card_image" alt="card">
                 </div>
-                <div class="col-4">
-                    <img src="/public/img/Businessman-at-the-desk-in-his-office-resting--1024x768.jpg" alt="">
-                </div>
-                <div class="col-4">
-                    <img src="/public/img/simple-home-office-with-tree-PBXRXYB-large-1024x768.jpg" alt="">
+            </div>
+            <div class="row text-center">
+                <div class="col-12">
+                    <button class="btn btn-dark rounded-pill margin-top">VIEW ALL POST</button>
                 </div>
             </div>
         </div>
@@ -56,6 +84,8 @@ export default {
 img{
     max-width: 100%;
     margin-top: 20px;
+    border-radius: 20px;
+    box-shadow: 5px 10px #f1f1f1;
 }
 
 .text-color {
@@ -69,6 +99,34 @@ img{
     top: 70%;
     rotate: 270deg;
     font-size: 0.8rem;
+}
+
+/* Card-absolute */
+.card-absolute{
+    bottom: -20%;
+    left: 50%;
+    transform: translate(-50%,-20%);
+    background-color: white;
+    width: 70%;
+    padding: 20px;
+}
+
+.card-absolute-date{
+    font-size: 0.7rem;
+}
+
+.card-absolute-title{
+    font-weight: bold;
+}
+
+.card-absolute-title::before{
+    content: '•';
+    color: $green-text;
+    margin-right: 5px;
+}
+
+.margin-top{
+    margin-top: 70px;
 }
 
 </style>
