@@ -29,7 +29,7 @@ export default {
         <div class="col-9 d-flex gap-4 text-center">
         <div class="col">
             <div class="card mb-4 shadow-sm">
-                <div class="bg-color black"></div>
+                <div class="bg-color black border-top"></div>
             <div class="card-header py-3">
                 <h4 class="my-0 fw-normal">DESIGNING</h4>
                 <div>All Design</div>
@@ -39,18 +39,18 @@ export default {
                     <h1 class="card-title pricing-card-title">$10<small class="fw-light">/Design</small></h1>
                 </div>
                 <ul class="list-unstyled mt-3 mb-4">
-                <li class="mb-2"><i class="fa-solid fa-check"></i>Creative Design Enabled</li>
-                <li class="mb-2"><i class="fa-solid fa-check"></i>Vibrant Color Usage</li>
-                <li class="mb-2"><i class="fa-solid fa-check"></i>Eye Catching Design</li>
-                <li class="mb-2"><i class="fa-solid fa-check"></i>Extreme Typography</li>
-                <li class="mb-2"><i class="fa-solid fa-check"></i>Exceptional Design</li>
+                <li class="mb-4 mt-5"><i class="fa-solid fa-check"></i>Creative Design Enabled</li>
+                <li class="mb-4"><i class="fa-solid fa-check"></i>Vibrant Color Usage</li>
+                <li class="mb-4"><i class="fa-solid fa-check"></i>Eye Catching Design</li>
+                <li class="mb-4"><i class="fa-solid fa-check"></i>Extreme Typography</li>
+                <li class="mb-4"><i class="fa-solid fa-check"></i>Exceptional Design</li>
                 </ul>
             </div>
             </div>
         </div>
         <div class="col">
             <div class="card mb-4 shadow-sm">
-            <div class="bg-color green"></div>
+            <div class="bg-color green border-top"></div>
             <div class="card-header py-3">
                 <h4 class="my-0 fw-normal">DEVELOPMENT</h4>
                 <div>WordPress Projects</div>
@@ -60,18 +60,18 @@ export default {
                     <h1 class="card-title pricing-card-title">$15<small class="fw-light">/Design</small></h1>
                 </div>
                 <ul class="list-unstyled mt-3 mb-4">
-                <li class="mb-2"><i class="fa-solid fa-check"></i>Creative Design Enabled</li>
-                <li class="mb-2"><i class="fa-solid fa-check"></i>Vibrant Color Usage</li>
-                <li class="mb-2"><i class="fa-solid fa-check"></i>Eye Catching Design</li>
-                <li class="mb-2"><i class="fa-solid fa-check"></i>Extreme Typography</li>
-                <li class="mb-2"><i class="fa-solid fa-check"></i>Exceptional Design</li>
+                <li class="mb-4 mt-5"><i class="fa-solid fa-check"></i>Creative Design Enabled</li>
+                <li class="mb-4"><i class="fa-solid fa-check"></i>Vibrant Color Usage</li>
+                <li class="mb-4"><i class="fa-solid fa-check"></i>Eye Catching Design</li>
+                <li class="mb-4"><i class="fa-solid fa-check"></i>Extreme Typography</li>
+                <li class="mb-4"><i class="fa-solid fa-check"></i>Exceptional Design</li>
                 </ul>
             </div>
             </div>
         </div>
         <div class="col">
             <div class="card mb-4 shadow-sm">
-                <div class="bg-color black"></div>
+                <div class="bg-color black border-top"></div>
             <div class="card-header py-3">
                 <h4 class="my-0 fw-normal">DESIGNING</h4>
                 <div>All Design</div>
@@ -81,11 +81,11 @@ export default {
                     <h1 class="card-title pricing-card-title">$10<small class="fw-light">/Product</small></h1>
                 </div>
                 <ul class="list-unstyled mt-3 mb-4">
-                    <li class="mb-2"><i class="fa-solid fa-check"></i>Creative Design Enabled</li>
-                <li class="mb-2"><i class="fa-solid fa-check"></i>Vibrant Color Usage</li>
-                <li class="mb-2"><i class="fa-solid fa-check"></i>Eye Catching Design</li>
-                <li class="mb-2"><i class="fa-solid fa-check"></i>Extreme Typography</li>
-                <li class="mb-2"><i class="fa-solid fa-check"></i>Exceptional Design</li>
+                <li class="mb-4 mt-5"><i class="fa-solid fa-check"></i>Creative Design Enabled</li>
+                <li class="mb-4"><i class="fa-solid fa-check"></i>Vibrant Color Usage</li>
+                <li class="mb-4"><i class="fa-solid fa-check"></i>Eye Catching Design</li>
+                <li class="mb-4"><i class="fa-solid fa-check"></i>Extreme Typography</li>
+                <li class="mb-4"><i class="fa-solid fa-check"></i>Exceptional Design</li>
                 </ul>
             </div>
             </div>
@@ -113,6 +113,10 @@ export default {
 
 .black{
     background-color: black;
+}
+
+.border-top{
+    border-radius: 20px 20px 0px 0px;
 }
 
 .green{
