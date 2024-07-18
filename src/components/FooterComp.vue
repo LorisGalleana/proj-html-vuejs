@@ -28,6 +28,32 @@ export default {
                     "name": "mighty furnitures",
                     "image": "/img/client-5-2x.png"
                 }
+            ],
+            quickLinks: [
+                {
+                    "name": "Careers",
+                    "address": "#"
+                },
+                {
+                    "name": "News",
+                    "address": "#"
+                },
+                {
+                    "name": "Terms of use",
+                    "address": "#"
+                },
+                {
+                    "name": "Privacy Projects",
+                    "address": "#"
+                },
+                {
+                    "name": "About",
+                    "address": "#"
+                },
+                {
+                    "name": "Contact",
+                    "address": "#"
+                }
             ]
         }
     }
@@ -66,7 +92,66 @@ export default {
             <img :src="logo.image" alt="" v-for="(logo,index) in logos" :key="index">
         </div>
     </div>
-    <div class="white-block container-fluid"></div>
+    <div class="white-block container-fluid">
+        <div class="container d-flex">
+            <div class="description">
+                <img src="/public/img/cropped-Group-39-2x.png" alt="">
+                <div class="description-text">While the lovely valley teems with vapour around me, and the meridian sun strikes the upper surface of the impenetrable foliage of my trees.While the lovely valley teems with vapour around me.</div>
+            </div>
+            <div class="quick-links">
+                <div class="footer-title">QUICK LINKS</div>
+                <!--inizio linea divisore -->
+                <div class="full-line mb-4 d-flex gap-2">
+                        <div class="short">
+                        </div>
+                        <div class="long">
+
+                        </div>
+                    </div>
+                <!-- fine linea divisore -->
+                 <ul>
+                    <li v-for="(quick,index) in quickLinks" :key="index">
+                        <a :href="quick.address">{{ quick.name }}</a>
+                    </li>
+                 </ul>
+            </div>
+            <div class="contacts">
+                <div class="footer-title">CONTACT</div>
+                <!--inizio linea divisore -->
+                <div class="full-line mb-4 d-flex gap-2">
+                    <div class="short">
+                    </div>
+                    <div class="long">
+
+                    </div>
+                </div>
+                <!-- fine linea divisore -->
+                 <div class="address">
+                    Patricia C. Amedee 4401 Waldeck Street Grapevine Nashville, TX 76051
+                 </div>
+                 <div class="email">
+                    info@yourdomain.com
+                 </div>
+                 <div class="phone-number">
+                    +99 (0) 101 0000 888
+                 </div>
+            </div>
+            <div class="location-map">
+                <div class="footer-title">LOCATION ON MAP</div>
+                <!--inizio linea divisore -->
+                <div class="full-line mb-4 d-flex gap-2">
+                    <div class="short">
+                    </div>
+                    <div class="long">
+
+                    </div>
+                </div>
+                <!-- fine linea divisore -->
+                 <img class="map" src="/public/img/map.png" alt="">
+
+            </div>
+        </div>
+    </div>
     <div class="black-block container-fluid"></div>
 </template>
 
@@ -77,11 +162,12 @@ export default {
     background-color: #f6f6f6;
     height: 400px;
     position: relative;
-    margin-top: 400px;
+    margin-top: 200px;
 }
 .white-block {
     background-color: #fff;
     height: 400px;
+    margin-top: 8%;
 }
 .black-block {
     background: $black-gradient;
@@ -162,6 +248,45 @@ input[type=submit] {
         height: 100%;
     }
 
-}    
+}
+ul {
+    padding: 0;
+    margin-top: 10%;
+    line-height: 1.7;
+    li {
+    list-style: none;
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        
+    }
+}
+.description, .quick-links, .contacts, .location-map {
+    width: 25%;
+}
+.footer-title {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 4%;
+}
+.location-map {
+
+    img {
+        width: 100%;
+    }
+} 
+.description-text {
+    margin-top: 8%;
+}   
+.address {
+    margin: 10% 0 5%;
+}
+.email {
+    margin-bottom: 5%;
+}
+.map {
+    margin-top: 5%;
+}
 
 </style>
