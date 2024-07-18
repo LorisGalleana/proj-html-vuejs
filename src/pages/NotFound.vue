@@ -10,4 +10,9 @@ export default {
     </section>
 </template>
 
-<style scoped></style>
+<style scoped>
+h2 {
+    padding-top: 400px;
+    text-align: center;
+}
+</style>
