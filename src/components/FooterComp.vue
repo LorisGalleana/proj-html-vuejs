@@ -152,7 +152,18 @@ export default {
             </div>
         </div>
     </div>
-    <div class="black-block container-fluid"></div>
+    <div class="black-block container-fluid">
+        <div class="container black-container">
+            <div class="copyright">
+                © 2024 PHLOX BUSINESS THEME.
+            </div>
+            <div class="social">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-pinterest-p"></i>
+            </div>
+        </div>
+    </div>
 </template>
 
 <style lang="scss" scoped>
@@ -171,7 +182,7 @@ export default {
 }
 .black-block {
     background: $black-gradient;
-    height: 100px;
+    height: 75px;
 }
 .absolute {
     display: flex;
@@ -288,5 +299,17 @@ ul {
 .map {
     margin-top: 5%;
 }
+.black-container {
+    color: #ffffff80;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+.social {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
 
 </style>
