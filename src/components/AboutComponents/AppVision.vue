@@ -24,7 +24,7 @@ export default {
                 </div>
                
             </div>
-            <div class="row my-5 gap-5 flex-nowrap text-white text-center">
+            <div class="row my-5 flex-nowrap text-white text-center">
                 <div class="col-3">
                     <div class=""><i class="icon fa-solid fa-database" style="color: #ffffff;"></i></div>
                     <p class="fs-6 fw-semibold">Virtual Document </p>
