@@ -54,7 +54,4 @@ export default {
         padding: 12px 30px;
         box-shadow: 6px 6px 25px 0px rgba(0, 217, 166, .65);
 }
-.white-space {
-    height: 1000px;
-}    
 </style>
