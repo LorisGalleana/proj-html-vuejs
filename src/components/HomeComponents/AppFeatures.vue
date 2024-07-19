@@ -63,7 +63,8 @@ export default {
                 <div class="col-8">
                     <div class="my-row">
                         <div class="card" v-for="(card,i) in cards" :key="i">
-                            <div class="background-col">
+                            <div class="background-col"></div>
+                            <div class="my-card-text">
                                 <div><i :class="card.card_icon"></i></div>
                                 <h3>{{ card.card_title }}</h3>
                                 <p class="py-2 mini-font">{{ card.card_description }}</p>
@@ -111,6 +112,7 @@ export default {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     margin-bottom: 10px;
     border-radius: 10px;
+    position: relative;
 }
 // vertical text
 
@@ -133,14 +135,26 @@ export default {
 }
 
 .card:hover .background-col{
-    background: $green-gradient;
-    transition: all 0.3s;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
 }
 
 .background-col{
+    background: $green-gradient-right;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
     width: 100%;
     height: 100%;
+    z-index: 100;
     border-radius: 10px;
+    padding: 20px;
+}
+
+.my-card-text{
+    z-index: 200;
     padding: 20px;
 }
 

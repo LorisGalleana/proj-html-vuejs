@@ -42,5 +42,4 @@ export default {
     .text-color {
         color: $green-text;
     }
-  
 </style>
