@@ -3,54 +3,27 @@ export default {
     name: "AppFeedback",
     data() {
     return {
-      counters: [
-        { displayValue: 0, targetValue: 280 },
-        { displayValue: 0, targetValue: 3500 },
-        { displayValue: 0, targetValue: 100 }
-      ],
-      duration: 2000, // Durata in millisecondi
-      startTime: null,
-      observer: null
+      displayValue: 0,
+      targetValue: 280,
+      duration: 4000, // Durata in millisecondi
+      startTime: null
     };
   },
   mounted() {
-    this.observer = new IntersectionObserver(this.handleIntersection, {
-      threshold: 0.1 // Il callback viene eseguito quando il 10% dell'elemento è visibile
-    });
-    this.observer.observe(this.$el);
+    requestAnimationFrame(this.animateValue);
   },
   methods: {
-    handleIntersection(entries) {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          this.startAnimation();
-          this.observer.unobserve(this.$el); // Rimuove l'osservatore dopo che l'animazione inizia
-        }
-      });
-    },
-    startAnimation() {
-      requestAnimationFrame(this.animateValues);
-    },
-    animateValues(timestamp) {
+    animateValue(timestamp) {
       if (!this.startTime) this.startTime = timestamp;
       const progress = timestamp - this.startTime;
-      this.counters.forEach(counter => {
-        const increment = (counter.targetValue / this.duration) * progress;
-        counter.displayValue = Math.min(Math.floor(increment), counter.targetValue);
-      });
-
+      const increment = (this.targetValue / this.duration) * progress;
+      this.displayValue = Math.min(Math.floor(increment), this.targetValue);
+      
       if (progress < this.duration) {
-        requestAnimationFrame(this.animateValues);
+        requestAnimationFrame(this.animateValue);
       } else {
-        this.counters.forEach(counter => {
-          counter.displayValue = counter.targetValue; // Assicura che il valore finale sia esatto
-        });
+        this.displayValue = this.targetValue; // Assicura che il valore finale sia esatto
       }
-    }
-  },
-  beforeDestroy() {
-    if (this.observer) {
-      this.observer.disconnect();
     }
   }
 }
@@ -62,17 +35,17 @@ export default {
             <div class="green-block">
                 <div class="numbers">
                     <div class="project">
-                        <div class="counter" ref="counter">{{ counter1.displayValue }}</div>
+                        <div class="project-number counter">{{ displayValue }}</div>
                         <div>PROJECTS</div>
                     </div>
                     <div class="comment-satisfaction">
                         <div class="user-comments">
-                            <div class="comment-number">+{{ counter2.displayValue }}</div>
+                            <div class="comment-number">+3,500</div>
                             <div>USERS'COMMENTS</div>
                         </div>
                         <div class="vertical-divisor"></div>
                         <div class="happy-clients">
-                            <div class="client-number">{{ counter3.displayValue }}%</div>
+                            <div class="client-number">100%</div>
                             <div>HAPPY CLIENTS</div>
                         </div>
                     </div>
