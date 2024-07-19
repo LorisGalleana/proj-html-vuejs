@@ -70,7 +70,7 @@
 
 
 <template>
-    <swiper :navigation="true" :loop="true" :modules="modules" class="mySwiper">
+    <swiper :navigation="true" :loop="true" :modules="modules" class="mySwiper mt-5">
         <swiper-slide v-for="(slide, i) in slides" :key="i">
             <div class="container-fluid">
                 <div class="row align-items-center">
