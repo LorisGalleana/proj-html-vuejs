@@ -137,6 +137,7 @@ export default {
         cursor: pointer;
         z-index: 9;
         opacity: 0.8;
+        border-radius: 5px;
     }
 }
 
@@ -148,6 +149,7 @@ export default {
 
 .card-img{
         max-width: 100%;
+        border-radius: 5px;
     }
 
 .info{
