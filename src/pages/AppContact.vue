@@ -16,7 +16,7 @@ export default {
         <h2 class="title-contacts"> Contact Page </h2>
     </div>
     <AppMap />
-    <AppForm/>
+    <AppForm />
 </template>
 
 <style lang="scss" scoped>
