@@ -6,7 +6,8 @@ export default {
     },
     data() {
       return {
-        isGameOver: false
+        isGameOver: false,
+        topScores: this.getTopScores()
       };
     },
     methods: {
@@ -98,6 +99,12 @@ export default {
           ctx.fillStyle = "black";
           ctx.font = "20px Arial";
           ctx.fillText(`Score: ${score}`, canvas.width - 120, 30);
+          
+          // Draw top scores
+          ctx.fillText("Top Scores:", 10, 30);
+          this.topScores.forEach((topScore, index) => {
+            ctx.fillText(`${index + 1}. ${topScore}`, 10, 60 + index * 30);
+          });
         };
   
         const createObstacle = () => {
@@ -155,6 +162,7 @@ export default {
             ) {
               // Collision detected
               this.isGameOver = true;
+              this.updateTopScores(score);
               if (confirm(`Game Over! Il tuo punteggio è: ${score}. Torna a trovarci!`)) {
                 setTimeout(() => {
                   window.location.reload(); // Ricarica la pagina dopo 1 secondo
@@ -188,6 +196,18 @@ export default {
         });
   
         initializeGame();
+      },
+      getTopScores() {
+        const scores = JSON.parse(localStorage.getItem('topScores')) || [];
+        return scores.sort((a, b) => b - a).slice(0, 5);
+      },
+      updateTopScores(newScore) {
+        let scores = JSON.parse(localStorage.getItem('topScores')) || [];
+        scores.push(newScore);
+        scores.sort((a, b) => b - a);
+        scores = scores.slice(0, 5);
+        localStorage.setItem('topScores', JSON.stringify(scores));
+        this.topScores = scores;
       }
     }
   };
@@ -211,3 +231,4 @@ h2 {
     background: #f4f4f4;
   }
 </style>
+
