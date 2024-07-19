@@ -3,8 +3,11 @@ export default {
     name: "AppFeedback",
     data() {
     return {
-      displayValue: 0,
-      targetValue: 280,
+      counters: [
+        { displayValue: 0, targetValue: 280 },
+        { displayValue: 0, targetValue: 3500 },
+        { displayValue: 0, targetValue: 100 }
+      ],
       duration: 2000, // Durata in millisecondi
       startTime: null,
       observer: null
@@ -14,30 +17,34 @@ export default {
     this.observer = new IntersectionObserver(this.handleIntersection, {
       threshold: 0.1 // Il callback viene eseguito quando il 10% dell'elemento è visibile
     });
-    this.observer.observe(this.$refs.counter);
+    this.observer.observe(this.$el);
   },
   methods: {
     handleIntersection(entries) {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           this.startAnimation();
-          this.observer.unobserve(this.$refs.counter); // Rimuove l'osservatore dopo che l'animazione inizia
+          this.observer.unobserve(this.$el); // Rimuove l'osservatore dopo che l'animazione inizia
         }
       });
     },
     startAnimation() {
-      requestAnimationFrame(this.animateValue);
+      requestAnimationFrame(this.animateValues);
     },
-    animateValue(timestamp) {
+    animateValues(timestamp) {
       if (!this.startTime) this.startTime = timestamp;
       const progress = timestamp - this.startTime;
-      const increment = (this.targetValue / this.duration) * progress;
-      this.displayValue = Math.min(Math.floor(increment), this.targetValue);
-      
+      this.counters.forEach(counter => {
+        const increment = (counter.targetValue / this.duration) * progress;
+        counter.displayValue = Math.min(Math.floor(increment), counter.targetValue);
+      });
+
       if (progress < this.duration) {
-        requestAnimationFrame(this.animateValue);
+        requestAnimationFrame(this.animateValues);
       } else {
-        this.displayValue = this.targetValue; // Assicura che il valore finale sia esatto
+        this.counters.forEach(counter => {
+          counter.displayValue = counter.targetValue; // Assicura che il valore finale sia esatto
+        });
       }
     }
   },
@@ -55,17 +62,17 @@ export default {
             <div class="green-block">
                 <div class="numbers">
                     <div class="project">
-                        <div class="counter" ref="counter">{{ displayValue }}</div>
+                        <div class="counter" ref="counter">{{ counter1.displayValue }}</div>
                         <div>PROJECTS</div>
                     </div>
                     <div class="comment-satisfaction">
                         <div class="user-comments">
-                            <div class="comment-number">+3,500</div>
+                            <div class="comment-number">+{{ counter2.displayValue }}</div>
                             <div>USERS'COMMENTS</div>
                         </div>
                         <div class="vertical-divisor"></div>
                         <div class="happy-clients">
-                            <div class="client-number">100%</div>
+                            <div class="client-number">{{ counter3.displayValue }}%</div>
                             <div>HAPPY CLIENTS</div>
                         </div>
                     </div>
