@@ -152,12 +152,16 @@
 }
 
 .btn-color {
-    background: black ;
+    background: #202020 ;
     border-radius: 24px;
     font-size: 0.7rem;
     padding: 12px 30px;
     a {
         color: white;
+    }
+    &:hover {
+        box-shadow: 10px 10px 50px 0 rgba(0, 217, 166, .8);
+        background-color: #00d9a6;
     }
 }
 
