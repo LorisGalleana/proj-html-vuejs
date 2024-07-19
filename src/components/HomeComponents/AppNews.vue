@@ -60,7 +60,9 @@ export default {
                             {{ card.card_absolute_title }}
                         </div>
                     </div>
-                    <img :src="card.card_image" alt="card">
+                    <div class="img-container">
+                        <img :src="card.card_image" alt="card">
+                    </div>
                 </div>
             </div>
             <div class="row text-center">
@@ -92,9 +94,9 @@ export default {
 
 img{
     max-width: 100%;
-    margin-top: 20px;
     border-radius: 20px;
     box-shadow: 5px 10px #f1f1f1;
+    object-fit: cover;
 }
 
 .text-color {
@@ -144,7 +146,12 @@ img{
 img:hover{
     transition: all 0.5s ease-in-out;
     transform: scale(1.1);
+}
 
+.img-container{
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 20px;
 }
 
 .my-card:hover .card-absolute{
