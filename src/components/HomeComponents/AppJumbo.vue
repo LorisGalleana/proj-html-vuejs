@@ -70,7 +70,7 @@
 
 
 <template>
-    <swiper :navigation="true" :loop="true" :modules="modules" class="mySwiper mt-5">
+    <swiper :navigation="true" :loop="true" :modules="modules" class="mySwiper">
         <swiper-slide v-for="(slide, i) in slides" :key="i">
             <div class="container-fluid">
                 <div class="row align-items-center">
@@ -122,6 +122,10 @@
 // swiper arrows
 
 // styles
+
+.mySwiper {
+    padding-top: 100px;
+}
 
 .container-fluid {
     height: 120vh;
