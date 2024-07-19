@@ -10,7 +10,10 @@ export default {
             <div>
                 <div>PLEASE SEND US YOUR <span class="text-color">QUESTIONS</span> AND </div>
                 <div>WE CAN <span class="text-color">HELP</span> YOU BETTER</div>
-                <a href="#" class="btn btn-color ">CONTACT US</a>
+                <a href="#" class="btn-color">
+                        <span class="overlay overlay-black"></span>
+                        <span class="my-btn-text position-absolute">CONTACT&nbsp;US</span>
+                    </a>
             </div>
         </div>
     </div>
@@ -45,13 +48,5 @@ export default {
 }
 .font-size {
     font-size: 3rem;
-}
-.btn-color {
-        background: $green-gradient ;
-        color: white;
-        border-radius: 24px;
-        margin-top: 45px;
-        padding: 12px 30px;
-        box-shadow: 6px 6px 25px 0px rgba(0, 217, 166, .65);
 }
 </style>

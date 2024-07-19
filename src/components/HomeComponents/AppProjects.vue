@@ -101,8 +101,11 @@ export default {
          </div>
          <!-- Button -->
          <div class="row">
-            <div class="col-12 text-center">
-                <div class="btn btn-color">READ MORE</div>
+            <div class="col-12 text-center mt-5">
+                <a href="#" class="btn-color">
+                    <span class="overlay overlay-black"></span>
+                    <span class="my-btn-text position-absolute">READ&nbsp;MORE</span>
+                </a>
             </div>
          </div>
     </div>
@@ -156,16 +159,6 @@ export default {
 
 h5,h6{
     animation: text-animation 1s ease-in-out;
-}
-
-/* Bottone */
-.btn-color{
-    background: $green-gradient;
-    padding: 10px 30px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    color: white;
-    margin: 80px 0;
 }
 
 /* Vertical text */

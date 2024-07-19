@@ -42,7 +42,7 @@ export default {
 </script>
 
 <template>
-    <div class="position-fixed sticky-top w-100 z-3">
+    <div class="position-fixed sticky-top w-100 z-1000">
         <div class="container-fluid black">
         <div class="container upper-container">
             <div class="contact">
@@ -76,7 +76,10 @@ export default {
                 </ul>
             </nav>
             <div class="purchase-search">
-                <a href="#" class="btn btn-color ">PURCHASE</a>
+                <a href="#" class="btn-color">
+                    <span class="overlay overlay-black"></span>
+                    <span class="my-btn-text position-absolute">PURCHASE</span>
+                </a>
                 <button class="search"><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
         </div>
@@ -88,13 +91,6 @@ export default {
 
 <style lang="scss" scoped>
 @use "../styles/partials/variables" as *;
-    .btn-color {
-        background: $green-gradient ;
-        color: white;
-        border-radius: 24px;
-        font-size: 0.7rem;
-        padding: 12px 30px;
-    }
     .router-list {
         list-style: none;
         gap: 30px;

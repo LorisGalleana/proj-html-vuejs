@@ -84,7 +84,10 @@ export default {
                     Let's Talk About Work
                 </div>
                 <div class="start">
-                    <a href="#" class="btn btn-color ">START NOW</a>
+                    <a href="#" class="btn-color-black">
+                        <span class="overlay overlay-green"></span>
+                        <span class="my-btn-text position-absolute">START&nbsp;NOW&nbsp;</span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -242,13 +245,6 @@ input[type=submit] {
     position: absolute;
     right: 24%;
     top: 58%;
-}
-.btn-color {
-        background: $black-gradient ;
-        color: white;
-        border-radius: 30px;
-        font-size: 0.7rem;
-        padding: 18px 45px;
 }
 .logos-container {
     position: relative;

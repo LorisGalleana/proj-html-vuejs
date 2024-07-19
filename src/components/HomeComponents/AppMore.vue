@@ -26,7 +26,10 @@ export default {
                             </div>
                         </div>
                     <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.Separated they live in Bookmarksgrove.</p>
-                    <a href="#" class="btn btn-color ">READ MORE</a>
+                    <a href="#" class="btn-color">
+                    <span class="overlay overlay-black"></span>
+                    <span class="my-btn-text position-absolute">READ&nbsp;MORE</span>
+                </a>
                 </div>
             </div>
         </div>
@@ -40,17 +43,6 @@ export default {
     }
     .text-color {
         color: $green-text;
-    }
-    .btn-color {
-        background: $green-gradient ;
-        color: white;
-        border-radius: 24px;
-        font-size: 0.7rem;
-        padding: 12px 30px;
-        &:hover{
-            background: black;
-            color: white;
-        }
     }
     .Mycontainer{
         position: relative;

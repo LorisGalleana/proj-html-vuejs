@@ -64,8 +64,11 @@ export default {
                 </div>
             </div>
             <div class="row text-center">
-                <div class="col-12">
-                    <button class="btn btn-dark rounded-pill margin-top">VIEW ALL POST</button>
+                <div class="col-12 my-margin-top">
+                    <a href="#" class="btn-color-black">
+                        <span class="overlay overlay-green"></span>
+                        <span class="my-btn-text position-absolute">VIEW&nbsp;ALL&nbsp;POST</span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -74,6 +77,10 @@ export default {
 
 <style lang="scss" scoped>
 @use "../../styles/partials/variables" as *;
+
+.my-margin-top{
+    margin-top: 100px;
+}
 
 .color-bg {
     background: white;

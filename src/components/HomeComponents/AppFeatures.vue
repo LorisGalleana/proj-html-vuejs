@@ -45,7 +45,7 @@ export default {
 
                     <!-- linea divisore -->
 
-                    <div class="full-line mt-4 mb-4 d-flex gap-2">
+                    <div class="full-line mt-5 mb-5 d-flex gap-2">
                         <div class="short">
 
                         </div>
@@ -55,7 +55,10 @@ export default {
                     </div>
 
 
-                    <a href="#" class="btn btn-color mt-4">VIEW ALL</a>
+                    <a href="#" class="btn-color">
+                    <span class="overlay overlay-black"></span>
+                    <span class="my-btn-text position-absolute">VIEW ALL</span>
+                </a>
                 </div>
                 <div class="col-8">
                     <div class="my-row">
@@ -81,14 +84,6 @@ export default {
 
 .text-color {
     color: $green-text;
-}
-
-.btn-color {
-    background: $green-gradient ;
-    color: white;
-    border-radius: 24px;
-    font-size: 0.7rem;
-    padding: 12px 30px;
 }
 
 .mini-font {
