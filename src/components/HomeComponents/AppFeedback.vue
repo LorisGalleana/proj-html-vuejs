@@ -1,6 +1,51 @@
 <script>
 export default {
-    name: "AppFeedback"
+    name: "AppFeedback",
+    data() {
+    return {
+      displayValue: 0,
+      targetValue: 280,
+      duration: 2000, // Durata in millisecondi
+      startTime: null,
+      observer: null
+    };
+  },
+  mounted() {
+    this.observer = new IntersectionObserver(this.handleIntersection, {
+      threshold: 0.1 // Il callback viene eseguito quando il 10% dell'elemento è visibile
+    });
+    this.observer.observe(this.$refs.counter);
+  },
+  methods: {
+    handleIntersection(entries) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          this.startAnimation();
+          this.observer.unobserve(this.$refs.counter); // Rimuove l'osservatore dopo che l'animazione inizia
+        }
+      });
+    },
+    startAnimation() {
+      requestAnimationFrame(this.animateValue);
+    },
+    animateValue(timestamp) {
+      if (!this.startTime) this.startTime = timestamp;
+      const progress = timestamp - this.startTime;
+      const increment = (this.targetValue / this.duration) * progress;
+      this.displayValue = Math.min(Math.floor(increment), this.targetValue);
+      
+      if (progress < this.duration) {
+        requestAnimationFrame(this.animateValue);
+      } else {
+        this.displayValue = this.targetValue; // Assicura che il valore finale sia esatto
+      }
+    }
+  },
+  beforeDestroy() {
+    if (this.observer) {
+      this.observer.disconnect();
+    }
+  }
 }
 </script>
 
@@ -10,7 +55,7 @@ export default {
             <div class="green-block">
                 <div class="numbers">
                     <div class="project">
-                        <div class="project-number">280</div>
+                        <div class="counter" ref="counter">{{ displayValue }}</div>
                         <div>PROJECTS</div>
                     </div>
                     <div class="comment-satisfaction">
@@ -153,6 +198,9 @@ ul {
             color: $green-text;
         }
     }
+}
+.counter {
+  font-size: 130px;
 }
 
 </style>

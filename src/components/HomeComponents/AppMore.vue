@@ -73,12 +73,12 @@ export default {
   }
   .containerGreen::after {
     content: "";
-    top: -85px;
+    top: -103px;
     left: 0;
     position: absolute;
     background: $green-gradient;
     width: 65%;
-    height: 121%;
+    height: 127%;
     opacity: .8;
     border-radius: 10px;
 
