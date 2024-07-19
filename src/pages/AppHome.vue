@@ -23,9 +23,20 @@ export default {
     },
     setup() {
     const showButton = ref(false);
+    const showFeatures = ref(false);
+    const showMore = ref(false);
+    const showProjects = ref(false);
+    const showFeedback = ref(false);
+
 
     const handleScroll = () => {
-      showButton.value = window.scrollY > 300;
+        showFeatures.value = window.scrollY > 250;
+        showButton.value = window.scrollY > 300;
+        showMore.value = window.scrollY > 1000;
+        showProjects.value = window.scrollY > 1700;
+        showFeedback.value = window.scrollY > 2400;
+
+      
     };
 
     onMounted(() => {
@@ -37,7 +48,11 @@ export default {
     });
 
     return {
-      showButton
+      showButton,
+      showFeatures,
+      showMore,
+      showProjects,
+      showFeedback,
     };
   }
 }
@@ -48,10 +63,18 @@ export default {
         <a href="#" class="position-fixed scroll-button" v-if="showButton">&uparrow;</a>
     </transition>
     <AppJumbo />
-    <AppFeatures />
-    <AppMore />
-    <AppProjects />
-    <AppFeedback />
+    <transition name="slide-right">
+        <AppFeatures v-if="showFeatures" />
+    </transition>
+    <transition name="slide-left">
+        <AppMore v-if="showMore" />
+    </transition>
+    <transition name="slide-right">
+        <AppProjects v-if="showProjects" />
+    </transition>
+    <transition name="slide-left">
+        <AppFeedback v-if="showFeedback" />
+    </transition>
     <AppPricing />
     <AppCustomer />
     <AppNews /> 
@@ -70,12 +93,29 @@ a{
     padding: 4px 12px;
     background-color: white;
 }
-
+/* Slide up */
 .slide-up-enter-active, .slide-up-leave-active {
-  transition: all 0.3s ease;
+  transition: all 1s ease;
 }
 .slide-up-enter-from, .slide-up-leave-to {
   transform: translateY(100%);
+  opacity: 0;
+}
+/* Slide right */
+.slide-right-enter-active{
+  transition: all 2s ease;
+}
+.slide-right-enter-from{
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+/* Slide left */
+.slide-left-enter-active{
+  transition: all 2s ease;
+}
+.slide-left-enter-from{
+  transform: translateX(-100%);
   opacity: 0;
 }
 </style>
