@@ -151,7 +151,7 @@ img:hover{
     transition: all 0.5s ease-in-out;
     bottom: -25%;
     color: white;
-    background: $green-gradient;
+    background: $green-gradient-right;
     z-index: 9;
 }
 
