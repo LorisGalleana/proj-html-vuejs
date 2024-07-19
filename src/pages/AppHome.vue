@@ -25,7 +25,7 @@ export default {
     const showButton = ref(false);
 
     const handleScroll = () => {
-      showButton.value = window.scrollY > 500; // Mostra il pulsante dopo 500px di scroll
+      showButton.value = window.scrollY > 300;
     };
 
     onMounted(() => {
@@ -44,8 +44,10 @@ export default {
 </script>
 
 <template>
-    <a href="#" class="position-fixed scroll-button" v-if="showButton">&uparrow;</a>
-   <AppJumbo />
+    <transition name="slide-up"><!-- Componente di vue -->
+        <a href="#" class="position-fixed scroll-button" v-if="showButton">&uparrow;</a>
+    </transition>
+    <AppJumbo />
     <AppFeatures />
     <AppMore />
     <AppProjects />
@@ -67,5 +69,13 @@ a{
     border-radius: 50%;
     padding: 4px 12px;
     background-color: white;
+}
+
+.slide-up-enter-active, .slide-up-leave-active {
+  transition: all 0.3s ease;
+}
+.slide-up-enter-from, .slide-up-leave-to {
+  transform: translateY(100%);
+  opacity: 0;
 }
 </style>
