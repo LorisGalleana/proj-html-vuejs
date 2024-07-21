@@ -17,8 +17,8 @@ export default {
 
 <template>
     <section >
-        <div class="container-fluid text-center ">
-            <h2 class="title py-4 ">About Page</h2>
+        <div class="container-fluid text-center extra-margin ">
+            <h2 class="title py-3 ">About Page</h2>
         </div>
         <AppAgency />
         <AppVision />
@@ -29,4 +29,8 @@ export default {
 
 <style lang="scss" scoped>
 @use "../styles/partials/variables" as *;
+
+.extra-margin {
+    padding-top: 5%;
+}
 </style>
