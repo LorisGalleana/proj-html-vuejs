@@ -29,7 +29,16 @@ const router = createRouter({
             component: NotFound
         },
 
-    ]
+    ],
+    scrollBehavior(to, from, savedPosition) {
+        // Se c'è una posizione salvata (ad esempio quando si preme il pulsante indietro), scorrere a quella posizione
+        if (savedPosition) {
+          return savedPosition
+        } else {
+          // Altrimenti, scorri fino in cima
+          return { top: 0 }
+        }
+      }
 });
 
 export { router };
