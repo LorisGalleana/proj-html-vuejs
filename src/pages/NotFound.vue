@@ -7,6 +7,7 @@ export default {
     data() {
       return {
         isGameOver: false,
+        isPaused: false,
         topScores: this.getTopScores()
       };
     },
@@ -176,16 +177,16 @@ export default {
         };
   
         const gameLoop = () => {
-          if (this.isGameOver) return; // Esci dal ciclo se il gioco è finito
-  
-          ctx.clearRect(0, 0, canvas.width, canvas.height);
-          drawDino();
-          drawObstacles();
-          drawScore();
-          updateObstacles();
-          updateDino();
-          checkCollision();
-          requestAnimationFrame(gameLoop);
+            if (this.isGameOver || this.isPaused) return; // Esci dal ciclo se il gioco è finito o in pausa
+
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            drawDino();
+            drawObstacles();
+            drawScore();
+            updateObstacles();
+            updateDino();
+            checkCollision();
+            requestAnimationFrame(gameLoop);
         };
   
         document.addEventListener('keydown', event => {
@@ -209,6 +210,10 @@ export default {
         localStorage.setItem('topScores', JSON.stringify(scores));
         this.topScores = scores;
       }
+    },
+    beforeRouteLeave(to, from, next) {
+        this.isPaused = true; // Metti in pausa il gioco
+        next();
     }
   };
 </script>
